@@ -56,18 +56,55 @@ body{
 }
 .grid {
     display: grid;
+    grid-gap: 64px;
+}
+.footer-grid{
     grid-template-columns: 1fr 2fr 2fr;
+}
+.grid-2-columns{
+    grid-template-columns: 1fr 1fr;
+}
+main {
+    background-color: white;
+}
+.main-photo{
+    max-width: 100%;
+}
+main h2{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    color: #272044;
+    opacity: 0.7;
+    margin: 0;
+    text-transform: uppercase;
+}
+main h3 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.5;
+    color: #272044;
+    margin: 0;
+}
+main p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #272044;
+    opacity: 0.7;
 }
 section {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 100px 0;
 }
 footer{
     color: white;
     background-image: linear-gradient(rgba(57, 41, 30, 0.9), rgba(55, 41, 30, 0.9)), url("/images/tvpeninsula.jpg");
     background-size: cover;
     background-repeat: none;
-    padding: 100px 0;
 }
 
 footer h3{
@@ -108,5 +145,12 @@ footer a{
     }
     header h3 {
         font-size: 12px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        grid-gap: 32px;
+    }
+    section{
+        padding: 30px;
     }
 }
