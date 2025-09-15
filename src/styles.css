@@ -1,3 +1,11 @@
+:root{
+    --main-color:rgba(10, 6, 3, 0.949);
+    --secondary-color:white;
+    --tertiary-color: rgb(210, 196, 171);
+    --footer-color: rgba(57, 41, 30, 0.9), rgba(55, 41, 30, 0.9);
+}
+
+
 header {
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url("/images/traverse-woods.jpg");
     background-repeat: none;
@@ -50,9 +58,9 @@ header a {
     text-transform: uppercase;
 }
 
-body{
+body {
     font-family: "Poppins", sans-serif;
-    background-color: rgba(10, 6, 3, 0.949);
+    background-color: var(--main-color);
 }
 .grid {
     display: grid;
@@ -81,9 +89,9 @@ body{
     text-decoration: none;
 }
 main {
-    background-color: white;
+    background-color: var(--secondary-color);
 }
-.img-responsive{
+.img-responsive {
     width: 100%;
     display: block;
 }
@@ -137,11 +145,14 @@ section {
     padding: 100px;
 }
 section.second {
-    background-color: rgb(210, 196, 171);
+    background-color: var(--tertiary-color);
 }
 .card {
     background-color: white;
     margin: 30px 0;
+}
+.card-header.grid{
+    grid-gap: 0;
 }
 .card-body{
     padding: 30px;
@@ -149,9 +160,13 @@ section.second {
 .card-footer{
     padding: 20px 30px;
 }
+.embed{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
 footer{
     color: white;
-    background-image: linear-gradient(rgba(57, 41, 30, 0.9), rgba(55, 41, 30, 0.9)), url("/images/tvpeninsula.jpg");
+    background-image: linear-gradient(var(--footer-color)), url("/images/tvpeninsula.jpg");
     background-size: cover;
     background-repeat: none;
 }
@@ -201,5 +216,11 @@ footer a{
     }
     section{
         padding: 30px;
+    }
+    .card-header img{
+        display: none;
+    }
+    .embed{
+        aspect-ratio: 16 / 9;
     }
 }
